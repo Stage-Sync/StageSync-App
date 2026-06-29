@@ -8,7 +8,7 @@ This is the application source for [StageSync](https://StageSync.org). Looking f
 
 ## Building the application
 1. Ensure everything has compiled *(specifically TailwindCSS)*
-2. Run Electrobun Build - `bun run build:canary`
+2. Run Electrobun Build *(both canary and stable)* - `bun run build`
 
 ## Publishing StageSync
 This will be available **Soon™**
