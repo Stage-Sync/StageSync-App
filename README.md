@@ -1,5 +1,5 @@
 # StageSync App
-This is the application source for [StageSync](https://StageSync.org). Looking for the website? It's at [StageSync-Website](https://github.com/StageSync/StageSync-Website)!
+This is the application source for [StageSync](https://StageSync.org). Looking for the website? It's at [StageSync-Website](https://github.com/Stage-Sync/StageSync-Website)!
 
 ## How to run development
 1. Install Bun packages - `bun install`
