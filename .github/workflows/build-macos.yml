@@ -60,8 +60,10 @@ jobs:
             - name: Create Stable Release
               uses: softprops/action-gh-release@v2
               with:
-                draft: true
                 files: artifacts/*
+
+                # Mark this release as a draft for v*.*.*-draft tags
+                draft: ${{ contains(github.ref_name, '-draft') }}
             
             - name: POST Webhook
               run: |
