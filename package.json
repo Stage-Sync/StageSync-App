@@ -1,30 +1,36 @@
 {
-	"name": "stagesync",
-	"version": "1.0.0",
-	"type": "module",
-	"description": "Manage projection media and playback in one location.",
-	"author": "Max McDaniel",
-	"scripts": {
-		"start": "vite build && electrobun dev",
-		"dev": "electrobun dev --watch",
-		"dev:css": "bunx @tailwindcss/cli -i ./src/mainview/app.css -o ./src/mainview/index.css --watch",
-		"dev:hmr": "concurrently \"bun run hmr\" \"bun run start\"",
-		"hmr": "vite --port 5173",
-		"build:stable": "vite build && electrobun build --env=canary",
-		"build:canary": "vite build && electrobun build --env=canary",
-		"build": "concurrently \"bun run build:stable\" \"bun run build:stable\""
-	},
-	"dependencies": {
-		"electrobun": "1.18.1"
-	},
-	"devDependencies": {
-		"@sveltejs/vite-plugin-svelte": "^5.0.1",
-		"@tailwindcss/vite": "^4.3.1",
-		"@types/bun": "latest",
-		"concurrently": "^9.1.0",
-		"svelte": "^5.14.1",
-		"tailwindcss": "^4.3.1",
-		"typescript": "^5.7.2",
-		"vite": "^6.0.3"
-	}
+  "name": "stagesync",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Manage projection media and playback in one location.",
+  "author": "Max McDaniel",
+  "scripts": {
+    "start": "vite build && electrobun dev",
+    "dev": "electrobun dev --watch",
+    "dev:css": "bunx @tailwindcss/cli -i ./src/mainview/app.css -o ./src/mainview/index.css --watch",
+    "dev:hmr": "concurrently \"bun run hmr\" \"bun run start\"",
+    "hmr": "vite --port 5173",
+    "build:css": "bunx @tailwindcss/cli -i ./src/mainview/app.css -o ./src/mainview/index.css",
+    "build:stable": "vite build && electrobun build --env=canary",
+    "build:canary": "vite build && electrobun build --env=canary",
+    "build": "concurrently \"bun run build:stable\" \"bun run build:stable\""
+  },
+  "dependencies": {
+    "easymidi": "^3.2.0",
+    "electrobun": "1.18.1",
+    "node-osc": "^11.6.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.1",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/bun": "latest",
+    "concurrently": "^9.1.0",
+    "svelte": "^5.14.1",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "trustedDependencies": [
+    "@julusian/midi"
+  ]
 }
