@@ -11,9 +11,8 @@
     "dev:hmr": "concurrently \"bun run hmr\" \"bun run start\"",
     "hmr": "vite --port 5173",
     "build:css": "bunx @tailwindcss/cli -i ./src/mainview/app.css -o ./src/mainview/index.css",
-    "build:stable": "vite build && electrobun build --env=canary",
-    "build:canary": "vite build && electrobun build --env=canary",
-    "build": "concurrently \"bun run build:stable\" \"bun run build:stable\""
+    "build:stable": "build:css && vite build && electrobun build --env=stable",
+    "build:canary": "build:css && vite build && electrobun build --env=canary"
   },
   "dependencies": {
     "easymidi": "^3.2.0",
