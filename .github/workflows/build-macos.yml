@@ -26,8 +26,8 @@ jobs:
             - name: Install Bun Packages
               run: bun install
 
-            - name: Compile TailwindCSS
-              run: bun run build:css
+            # - name: Compile TailwindCSS
+            #   run: bun run build:css
 
             - name: Build Stable
               run: bun run build:stable
