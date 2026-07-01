@@ -26,9 +26,6 @@ jobs:
             - name: Install Bun Packages
               run: bun install
 
-            # - name: Compile TailwindCSS
-            #   run: bun run build:css
-
             - name: Build Stable
               run: bun run build:stable
 
@@ -38,13 +35,6 @@ jobs:
                 name: build-${{ matrix.os }}
                 path: artifacts/*
                 if-no-files-found: error
-
-            # - name: Create Stable Release
-            #   uses: softprops/action-gh-release@v3
-            #   with:
-            #     draft: true
-            #     files: |
-            #       artifacts/*
     
     release:
         needs: build-stable
