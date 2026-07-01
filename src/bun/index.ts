@@ -24,11 +24,13 @@ const mainWindow = new BrowserWindow({
 	title: "StageSync",
 	url,
 	frame: {
-		width: 900,
-		height: 700,
+		width: 1920,
+		height: 1080,
 		x: 200,
-		y: 200,
+		y: 200
 	},
 });
+
+mainWindow.maximize();
 
 console.log("StageSync started!");
